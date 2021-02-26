@@ -1,2 +1,2 @@
 FLASK_ENV=development
-FLASK_APP=ratestask
+FLASK_APP=app

@@ -1,0 +1,13 @@
+# Python virtual environment
+.venv
+venv
+
+# Git related files
+.git
+.github
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yaml
