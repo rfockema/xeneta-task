@@ -46,6 +46,6 @@ def rates_null(params):
 @main.route('/price', methods=['POST'])
 @input_validation(['date_from', 'date_to', 'origin', 'destination', 'price'])
 def add_price(params):
-    currency = request.form.get("currency")
+    currency = request.get_json().get("currency")
     
     return add_prices_for_daterange(params, currency)
