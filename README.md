@@ -107,7 +107,7 @@ Navigating to this url should display "The server is running!"
 
 ### Price
 ----
-  Upload prices for given date range
+  Upload price for given date range
 
 * **URL**
 
