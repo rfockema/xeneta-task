@@ -9,3 +9,6 @@ services:
       - db
   db:
     image: ratestask
+    build:
+      context: ./ratestask/
+      dockerfile: Dockerfile

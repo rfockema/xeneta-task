@@ -75,6 +75,8 @@ def add_prices_for_daterange(price_data, currency=None):
     if currency != None:
         api = api_config.get('currency', 'openexchangerates')
         currency_map = get_api_resp(api)
+        if currency not in currency_map.get('rates'):
+            return Response(response=f'Invalid currency: "{currency}"', status=400)
         price_value = price_value / currency_map.get('rates').get(currency)
 
     try:

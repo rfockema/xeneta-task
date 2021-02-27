@@ -48,4 +48,4 @@ def rates_null(params):
 def add_price(params):
     currency = request.form.get("currency")
     
-    return add_prices_for_daterange(params, 'GBP')
+    return add_prices_for_daterange(params, currency)

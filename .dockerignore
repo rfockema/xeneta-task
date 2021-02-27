@@ -11,3 +11,6 @@ venv
 Dockerfile
 .dockerignore
 docker-compose.yaml
+
+# db
+ratestask
