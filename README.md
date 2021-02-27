@@ -8,9 +8,7 @@ Clone this repo and then run the following in the repo's directory:
 
 ```bash
 docker-compose build
-```
 
-```bash
 docker-compose up -d
 ```
 
@@ -19,9 +17,9 @@ Navigating to this url should display "The server is running!"
 
 ## Endpoints:
 
-* #### Rates
+### Rates
 ----
-  Returns json data about a the average price per day for the given geographic groups.
+  Returns json data about the average price per day for the given geographic groups.
 
 * **URL**
 
@@ -63,7 +61,7 @@ Navigating to this url should display "The server is running!"
   * **Code:** 400 BAD REQUEST <br />
     **Content:** `Invalid or missing input`
 
-* #### Rates null
+### Rates null
 ----
   Returns json data about a the average price per day for the given geographic groups, days with less than 3 prices are null.
 
@@ -107,7 +105,7 @@ Navigating to this url should display "The server is running!"
   * **Code:** 400 BAD REQUEST <br />
     **Content:** `Invalid or missing input`
 
-* #### Price
+### Price
 ----
   Upload prices for given date range
 
