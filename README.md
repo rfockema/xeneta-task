@@ -115,9 +115,9 @@ Navigating to this url should display "The server is running!"
 
 * **Method:**
 
-  `GET`
+  `POST`
   
-*  **URL Params**
+*  **BODY Params**
 
    **Required:**
  
