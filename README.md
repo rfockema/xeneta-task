@@ -121,11 +121,15 @@ Navigating to this url should display "The server is running!"
 
    **Required:**
  
-   `origin=[string]`
-   `destination=[string]`
-   `date_from=[string]`
-   `date_to=[string]`
-   `date_to=[number]`
+    ```
+    {
+        "origin": string,
+        "destination": string,
+        "date_from": string,
+        "date_to": string,
+        "price": number
+    }
+    ```
 
 * **Success Response:**
 
