@@ -1,7 +1,6 @@
 # Task 1 Setup
 
 I dockerized the application using docker-compose.
-So to run the application docker is required.
 To run the application complete the following steps:
 
 Clone this repo and then run the following in the repo's directory:
