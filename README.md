@@ -33,10 +33,10 @@ Navigating to this url should display "The server is running!"
 
    **Required:**
  
-   `origin=[string]`
-   `destination=[string]`
-   `date_from=[string: YYYY-MM-DD]`
-   `date_to=[string: YYYY-MM-DD]`
+   * `origin=[string]`
+   * `destination=[string]`
+   * `date_from=[string: YYYY-MM-DD]`
+   * `date_to=[string: YYYY-MM-DD]`
 
 * **Success Response:**
 
@@ -77,10 +77,10 @@ Navigating to this url should display "The server is running!"
 
    **Required:**
  
-   `origin=[string]`
-   `destination=[string]`
-   `date_from=[string: YYYY-MM-DD]`
-   `date_to=[string: YYYY-MM-DD]`
+   * `origin=[string]`
+   * `destination=[string]`
+   * `date_from=[string: YYYY-MM-DD]`
+   * `date_to=[string: YYYY-MM-DD]`
 
 * **Success Response:**
 
