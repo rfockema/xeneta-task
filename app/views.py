@@ -22,6 +22,9 @@ def input_validation(required_params):
                         except ValueError as e:
                             message = f'Invalid date for "{param_key} = {param_value}", YYYY-MM-DD format required.'
                             return Response(response=message, status=400)
+                elif param_key != 'price' and not isinstance(param_value, str):
+                    message = f'Invalid parameter "{param_key} = {param_value}" needs to be a string'
+                    return Response(response=message, status=400)
                 elif param_key == 'price' and not str(param_value).isnumeric():
                     message = f'Invalid parameter "{param_key} = {param_value}" needs to be a number'
                     return Response(response=message, status=400)
