@@ -2,6 +2,7 @@
 from flask import Blueprint, request, jsonify, Response
 from app.models import db, get_rates, add_prices_for_daterange
 from functools import wraps
+from datetime import datetime
 
 main = Blueprint('main', __name__)
 
@@ -15,6 +16,12 @@ def input_validation(required_params):
                 if param_value == None:
                     message = f'Missing required parameter "{param_key}"'
                     return Response(response=message, status=400)
+                if param_key in ['date_from', 'date_to']:
+                        try:
+                            datetime.strptime(param_value ,'%Y-%m-%d')
+                        except ValueError as e:
+                            message = f'Invalid date for {param_key} = {param_value}, YYYY-MM-DD format required.'
+                            return Response(response=message, status=400)
                 if param_key != 'price' and not isinstance(param_value, str):
                     message = f'Invalid parameter "{param_key} = {param_value}" needs to be a string'
                     return Response(response=message, status=400)

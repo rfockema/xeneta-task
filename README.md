@@ -35,8 +35,8 @@ Navigating to this url should display "The server is running!"
  
    `origin=[string]`
    `destination=[string]`
-   `date_from=[string]`
-   `date_to=[string]`
+   `date_from=[string: YYYY-MM-DD]`
+   `date_to=[string: YYYY-MM-DD]`
 
 * **Success Response:**
 
@@ -79,8 +79,8 @@ Navigating to this url should display "The server is running!"
  
    `origin=[string]`
    `destination=[string]`
-   `date_from=[string]`
-   `date_to=[string]`
+   `date_from=[string: YYYY-MM-DD]`
+   `date_to=[string: YYYY-MM-DD]`
 
 * **Success Response:**
 
@@ -125,8 +125,8 @@ Navigating to this url should display "The server is running!"
     {
         "origin": string,
         "destination": string,
-        "date_from": string,
-        "date_to": string,
+        "date_from": string, (format: YYYY-MM-DD)
+        "date_to": string, (format: YYYY-MM-DD)
         "price": number
     }
     ```
