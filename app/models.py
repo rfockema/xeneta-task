@@ -1,12 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
-from flask import Response
+from flask import Response, current_app
 import requests
-from configparser import ConfigParser
 from datetime import datetime, timedelta
 
 db = SQLAlchemy()
-api_config = ConfigParser()
-api_config.read('api.ini')
 
 
 class Port(db.Model):
@@ -66,14 +63,14 @@ def get_api_resp(api):
         if last_update + timedelta(hours=1) > datetime.now():
             return api_cache[api]
 
-    resp = requests.get(api_config.get('currency', 'openexchangerates'))
+    resp = requests.get(api)
     api_cache[api] = resp.json()
     return api_cache[api]
 
 def add_prices_for_daterange(price_data, currency=None):
     price_value = float(price_data.get('price'))
     if currency != None:
-        api = api_config.get('currency', 'openexchangerates')
+        api = current_app.config['OPENEXCHANGERATES_API']
         currency_map = get_api_resp(api)
         if currency not in currency_map.get('rates'):
             return Response(response=f'Invalid currency: "{currency}"', status=400)
